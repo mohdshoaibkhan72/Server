@@ -23,14 +23,14 @@ const AddOrder = require("./Orders/addOrders");
 connectDB();
 
 // Enable CORS
-//app.use(cors());
-app.use(
-  cors({
-    origin: ["https://e-comrese-mern-server.vercel.app/"],
-    methods: ["POST", "GET"],
-    credentials: true,
-  })
-);
+app.use(cors());
+// app.use(
+//   cors({
+//     origin: ["https://e-comrese-mern-server.vercel.app/"],
+//     methods: ["POST", "GET"],
+//     credentials: true,
+//   })
+// );
 app.use(express.json());
 // Route for user registration & login
 app.post("/register", registerUser);
